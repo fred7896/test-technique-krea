@@ -69,31 +69,33 @@ export default class Main extends React.Component {
                             </div>
                             <p className="py-1 test-app">Et si vous testiez notre app ?</p></div>
                     </div>
-                    <form className="p-3" onSubmit={this.handleSubmit}>
+                    <div className="container-form">
+                        <form className="p-3" onSubmit={this.handleSubmit}>
 
-                        <div onChange={this.handleCivilite} className="my-2 civ">
-                            <p >Civilité :</p>
-                            <label htmlFor="civ-madame"><input type="radio" id="civ-madame" name="civ-madame" value="madame"
-                                checked={this.state.civilite === "madame"} ></input>
+                            <div onChange={this.handleCivilite} className="civ">
+                                <p >Civilité*</p>
+                                <label htmlFor="civ-madame"><input type="radio" id="civ-madame" name="civ-madame" value="madame"
+                                    checked={this.state.civilite === "madame"} ></input>
                             Madame</label>
-                            <label htmlFor="civ-monsieur"><input type="radio" id="civ-monsieur" name="drone" value="monsieur"
-                                checked={this.state.civilite === "monsieur"}
-                            ></input>
+                                <label htmlFor="civ-monsieur"><input type="radio" id="civ-monsieur" name="drone" value="monsieur"
+                                    checked={this.state.civilite === "monsieur"}
+                                ></input>
                             Monsieur</label>
-                        </div>
+                            </div>
 
-                        <div>
-                            <Field name="customerName" type="text" value={this.state.customerName} onChange={this.handleChange} placeholder="Nom*" ></Field>
-                            <Field name="customerSurname" type="text" value={this.state.customerSurname} onChange={this.handleChange} placeholder="Prénom*"></Field>
-                            <Field name="birthDate" type="text" value={this.state.birthDate} onChange={this.handleChange} placeholder="Date de naissance*"></Field>
-                            <Field name="email" type="email" value={this.state.email} onChange={this.handleChange} placeholder="Adresse email*"></Field>
-                            <Field name="phoneNumber" type="tel" value={this.state.phoneNumber} onChange={this.handleChange} placeholder="Téléphone*"></Field>
-                        </div>
-                        <Checkbox name="inputCheckbox" value={this.state.inputCheckbox} onChange={this.handleChange} >J'accepte de recevoir les offres DISTINGO</Checkbox>
+                            <div>
+                                <Field name="customerName" type="text" value={this.state.customerName} onChange={this.handleChange} placeholder="Nom*" ></Field>
+                                <Field name="customerSurname" type="text" value={this.state.customerSurname} onChange={this.handleChange} placeholder="Prénom*"></Field>
+                                <Field name="birthDate" type="date" value={this.state.birthDate} onChange={this.handleChange} placeholder="Date de naissance*"></Field>
+                                <Field name="email" type="email" value={this.state.email} onChange={this.handleChange} placeholder="Adresse email*"></Field>
+                                <Field name="phoneNumber" type="tel" value={this.state.phoneNumber} onChange={this.handleChange} placeholder="Téléphone*"></Field>
+                            </div>
+                            <Checkbox name="inputCheckbox" value={this.state.inputCheckbox} onChange={this.handleChange} >J'accepte de recevoir les offres DISTINGO (notamment les offres de fidélisation réservées aux clients) ainsi que celles des sociétés du groupe PSA et de leur réseau de distribution par email.</Checkbox>
+                            <div className="d-flex justify-content-center my-5"><input type="submit" value="VALIDER" className="button-validation"></input></div>
 
-                        <input type="submit" value="VALIDER" className="button-validation"></input>
 
-                    </form>
+                        </form>
+                    </div>
 
                 </div>
                 <footer id="footer">
