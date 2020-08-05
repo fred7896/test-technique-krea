@@ -83,13 +83,15 @@ export default class Main extends React.Component {
                         <form className="p-3" onSubmit={this.handleSubmit}>
 
                             <div onChange={this.handleCivilite} className="civ">
-                                <p >Civilité*</p>
-                                <label htmlFor="civ-madame"><input type="radio" id="civ-madame" name="civ-madame" value="madame"
-                                    checked={this.state.civilite === "madame"} ></input>
+                                <p className="pr-4" >Civilité*</p>
+                                <label htmlFor="civ-madame" className="pr-4 container-radio"><input type="radio" id="civ-madame" name="civ-madame" value="madame"
+                                    checked={this.state.civilite === "madame"}  ></input>
+                                    <span class="checkmark"></span>
                             Madame</label>
-                                <label htmlFor="civ-monsieur"><input type="radio" id="civ-monsieur" name="drone" value="monsieur"
+                                <label htmlFor="civ-monsieur" className="container-radio"><input type="radio" id="civ-monsieur" name="drone" value="monsieur"
                                     checked={this.state.civilite === "monsieur"}
                                 ></input>
+                                    <span class="checkmark"></span>
                             Monsieur</label>
                             </div>
 
