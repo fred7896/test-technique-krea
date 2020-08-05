@@ -1,38 +1,126 @@
-.App {
+body,
+h1,
+h2,
+h3,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.main-container {
+  background-color: #1e2336;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-img {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  width: 80%;
+  font-family: "Montserrat", sans-serif;
+}
+
+#footer {
+  width: 100%;
+  background-color: #1e2336;
+  height: 117px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-header-img {
+  position: relative;
+}
+
+.period {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: "Semi-bold";
+}
+
+.big-game {
+  width: 309px;
+  height: 38px;
+  background-color: #ffffff;
+  text-align: center;
+  font-size: 30px;
+  font-weight: "Semi-bold";
+}
+
+.test-app {
+  font-size: 18px;
+  font-weight: "Semi-bold";
+}
+
+.group-distingame {
+  display: flex;
+  justify-content: center;
+}
+.group-title {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-height: 90%;
+}
+
+.button-validation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1e2336;
+  color: white;
+  width: 279px;
+  height: 60px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form {
+  font-size: 14px;
+  color: #99a3a5;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.category-list-footer {
+  width: 50%;
+  font-size: 14px;
+  font-weight: 400;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  color: #ffffff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.civ {
+  display: flex;
+  justify-content: space-around;
 }
