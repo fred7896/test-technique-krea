@@ -53,6 +53,14 @@ a:hover {
 
 .footer-section {
   border-right: 1px solid;
+  width: 25%;
+  text-align: center;
+}
+
+.footer-section:nth-last-child(1) {
+  border: none;
+  width: 25%;
+  text-align: center;
 }
 
 .container-header-img {
