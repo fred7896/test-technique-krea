@@ -52,7 +52,7 @@ export default class Main extends React.Component {
         })
     }
     render() {
-        console.log(this.state.civilite);
+        const sections = ["les dotations", "Règlement", "Crédits", "Application DISTINGO", "Présentation de l application"];
         return (
             <div className="main-container">
                 <header className="container-img py-3">
@@ -98,11 +98,9 @@ export default class Main extends React.Component {
                 </div>
                 <footer id="footer">
                     <ul className="category-list-footer">
-                        <li><a href="#">Les dotations</a></li>
-                        <li><a href="#">Les dotations</a></li>
-                        <li><a href="#">Les dotations</a></li>
-                        <li><a href="#">Les dotations</a></li>
-                        <li><a href="#">Les dotations</a></li>
+                        {sections.map((section, idx) => {
+                            return <li key={idx} className="footer-section"><a href="#">{section}</a></li>
+                        })}
                     </ul>
                 </footer>
             </div >
