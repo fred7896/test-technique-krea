@@ -61,13 +61,16 @@ export default class Main extends React.Component {
                 <div id="content">
                     <div className="container-header-img">
                         <img src={visu} width="100%" alt="logo distingo" className="visu" />
-                        <div className="group-title py-3"><h1 className="period py-1">DU 6 MAI AU 6 JUIN 2020</h1>
-                            <div className="big-game py-1"><h2>GRAND JEU</h2></div>
-                            <div className="py-1 group-distingame">
-                                <h3 id="#distin">DISTIN</h3>
-                                <h3 id="#game">GAME</h3>
+                        <div className="group-title mt-4 py-3">
+                            <h1 className="period py-1">DU 6 MAI AU 6 JUIN 2020</h1>
+                            <div className="big-game py-1">
+                                <h2 style={{ fontSize: "inherit" }}>GRAND JEU</h2>
                             </div>
-                            <p className="py-1 test-app">Et si vous testiez notre app ?</p></div>
+                            <div className="py-1 group-distingame">
+                                <h3 id="distin">DISTIN</h3>
+                                <h3 id="game">GAME</h3>
+                            </div>
+                            <p className="test-app">Et si vous testiez notre app ?</p></div>
                     </div>
                     <div className="container-form">
                         <form className="p-3" onSubmit={this.handleSubmit}>
