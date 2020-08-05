@@ -86,7 +86,7 @@ export default class Main extends React.Component {
                             <div>
                                 <Field name="customerName" type="text" value={this.state.customerName} onChange={this.handleChange} placeholder="Nom*" ></Field>
                                 <Field name="customerSurname" type="text" value={this.state.customerSurname} onChange={this.handleChange} placeholder="Prénom*"></Field>
-                                <Field name="birthDate" type="date" value={this.state.birthDate} onChange={this.handleChange} placeholder="Date de naissance*"></Field>
+                                <Field name="birthDate" type="text" value={this.state.birthDate} onChange={this.handleChange} placeholder="Date de naissance*"></Field>
                                 <Field name="email" type="email" value={this.state.email} onChange={this.handleChange} placeholder="Adresse email*"></Field>
                                 <Field name="phoneNumber" type="tel" value={this.state.phoneNumber} onChange={this.handleChange} placeholder="Téléphone*"></Field>
                             </div>
