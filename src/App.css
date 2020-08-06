@@ -51,6 +51,10 @@ a:hover {
   position: relative;
 }
 
+.visu {
+  width: 100%;
+}
+
 .period {
   color: #ffffff;
   font-size: 1.375em;
@@ -69,7 +73,7 @@ a:hover {
 .test-app {
   font-size: 1.125em;
   font-weight: 600;
-  margin-top: -1.8em;
+  margin-top: -2vw;
 }
 
 .group-distingame {
@@ -335,4 +339,29 @@ input:focus {
   border: none;
   width: 25%;
   text-align: center;
+}
+
+@media (max-width: 575.98px) {
+  form {
+    width: 71vw;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  form {
+    width: 60vw;
+  }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  form {
+    width: 45vw;
+  }
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+  /* ...; */
 }

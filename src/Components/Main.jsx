@@ -56,27 +56,26 @@ export default class Main extends React.Component {
         return (
             <div className="main-container">
                 <header className="container-img py-3">
-                    <img src={logo} width="298px" height="62px" alt="logo distingo" />
+                    <img src={logo} width="298" height="62" alt="logo distingo" />
                 </header>
                 <div id="content">
-                    <div className="container-header-img">
-                        <img src={visu} width="100%" alt="logo distingo" className="visu" />
+                    <figure className="container-header-img">
+                        <img src={visu} alt="logo distingo" className="visu" />
                         <div className="group-title py-3">
-                            <h1 className="period py-1">DU 6 MAI AU 6 JUIN 2020</h1>
-                            <div className="big-game">
-                                <h2 style={{ fontSize: "inherit" }}>GRAND JEU</h2>
-                            </div>
+                            <figcaption className="period py-1">DU 6 MAI AU 6 JUIN 2020</figcaption>
+                            <figcaption className="big-game">GRAND JEU</figcaption>
                             <div className="group-distingame">
-                                <h3 id="distin">DISTIN</h3>
-                                <h3 id="game">GAME</h3>
+                                <h1 id="distin">DISTIN</h1>
+                                <h1 id="game">GAME</h1>
                             </div>
-                            <p className="test-app">Et si vous testiez notre app ?</p></div>
-                    </div>
+                            <figcaption className="test-app">Et si vous testiez notre app ?</figcaption>
+                        </div>
+                    </figure>
                     <div className="container-edito" >
-                        <section id="edito" className="p-4">
+                        <div id="edito" className="p-4">
                             <p id="last-step">Plus qu'une étape pour valider votre participation !</p>
                             <p id="invite-form">Pour valider votre participation au tirage au sort et vous sauvez pour de bon,<br /> veuillez remplir les champs ci-dessous :</p>
-                        </section>
+                        </div>
                     </div>
 
                     <div className="container-form">
