@@ -1,7 +1,8 @@
 import React from "react";
 import "../App.css";
-import logo from "../LOGO DISTINGO.png";
-import visu from "../VISU.png";
+import logo from "../Images/logo-distingo.png";
+import visu from "../Images/visu.png";
+import gifts from "../Images/gifts.png";
 import Field from "../Components/Field";
 import Checkbox from "../Components/Checkbox";
 
@@ -62,7 +63,7 @@ export default class Main extends React.Component {
                     <figure className="container-header-img">
                         <img src={visu} alt="logo distingo" className="visu" />
                         <div className="group-title py-3">
-                            <figcaption className="period py-1">DU 6 MAI AU 6 JUIN 2020</figcaption>
+                            <figcaption className="period py-1">DU 6 MAI AU 6 JUIN 2019</figcaption>
                             <figcaption className="big-game">GRAND JEU</figcaption>
                             <div className="group-distingame">
                                 <h1 id="distin">DISTIN</h1>
