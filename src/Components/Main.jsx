@@ -53,7 +53,7 @@ export default class Main extends React.Component {
         })
     }
     render() {
-        const sections = ["les dotations", "Règlement", "Crédits", "Application DISTINGO", "Présentation de l application"];
+        const sections = ["Les dotations", "Règlement", "Crédits", "Application DISTINGO", "Présentation de l application"];
         return (
             <div className="main-container">
                 <header className="container-img py-3">
@@ -71,6 +71,7 @@ export default class Main extends React.Component {
                             </div>
                             <figcaption className="test-app">Et si vous testiez notre app ?</figcaption>
                         </div>
+                        <div className="container-gifts"><img src={gifts} alt="gifts" /></div>
                     </figure>
                     <div className="container-edito" >
                         <div id="edito" className="p-4">
@@ -88,7 +89,7 @@ export default class Main extends React.Component {
                                     checked={this.state.civilite === "madame"} onChange={this.handleCivilite}  ></input>
                                     <span className="checkmark"></span>
                             Madame</label>
-                                <label htmlFor="civ-monsieur" className="container-radio"><input type="radio" id="civ-monsieur" name="drone" value="monsieur"
+                                <label htmlFor="civ-monsieur" className="container-radio"><input type="radio" id="civ-monsieur" name="civ-monsieur" value="monsieur"
                                     checked={this.state.civilite === "monsieur"} onChange={this.handleCivilite}
                                 ></input>
                                     <span className="checkmark"></span>

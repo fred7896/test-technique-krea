@@ -101,8 +101,13 @@ a:hover {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+}
+
+.container-gifts {
+  position: absolute;
+  right: 1vw;
+  top: 5%;
 }
 
 /* Edito */
