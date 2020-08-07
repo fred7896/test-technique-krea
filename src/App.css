@@ -27,17 +27,14 @@ a:hover {
   width: 100vw;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
-/* Image & Titles */
-
-.container-img {
-  display: flex;
-  justify-content: center;
-  width: 100%;
+.logo-distingo {
+  width: 298px;
 }
+
+/* Image & Titles */
 
 #content {
   display: flex;
@@ -45,6 +42,12 @@ a:hover {
   background-color: #ffffff;
   width: 80%;
   font-family: "Montserrat", sans-serif;
+}
+
+.container-img {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .container-header-img {
@@ -57,7 +60,7 @@ a:hover {
 
 .period {
   color: #ffffff;
-  font-size: 1.375em;
+  font-size: 22px;
   font-weight: 600;
 }
 
@@ -66,7 +69,7 @@ a:hover {
   height: 38px;
   background-color: #ffffff;
   text-align: center;
-  font-size: 1.875em;
+  font-size: 30px;
   font-weight: 600;
 }
 
@@ -83,14 +86,14 @@ a:hover {
 }
 
 #distin {
-  font-size: 6.1875em;
+  font-size: 99px;
   font-weight: 600;
   color: #1e2336;
 }
 
 #game {
   font-family: "Kalam", cursive;
-  font-size: 6.875em;
+  font-size: 110px;
   color: #ffffff;
 }
 
@@ -316,6 +319,17 @@ input:focus {
 
 /* Submit button */
 
+.container-submit {
+  position: relative;
+}
+
+.arrow {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  right: 30px;
+}
+
 .button-validation {
   display: flex;
   justify-content: center;
@@ -334,7 +348,7 @@ input:focus {
   font-weight: 400;
   width: 100%;
   background-color: #1e2336;
-  height: 117px;
+  min-height: 117px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -348,7 +362,7 @@ input:focus {
 
 .category-list-footer {
   width: 80%;
-  font-size: 0.875em;
+  font-size: 14px;
   font-weight: 400;
   list-style: none;
   display: flex;
@@ -362,27 +376,150 @@ input:focus {
   text-align: center;
 }
 
-@media (max-width: 575.98px) {
-  form {
-    width: 71vw;
+/* Large devices (desktops) */
+@media (max-width: 1300px) {
+  #distin,
+  #game {
+    font-size: 85px;
+  }
+  .container-gifts {
+    transform: scale(0.7);
+    top: 0px;
+    right: -15px;
   }
 }
 
-/* Small devices (landscape phones, less than 768px) */
-@media (max-width: 767.98px) {
-  form {
-    width: 60vw;
+/* Medium devices (tablets) */
+@media (max-width: 1100px) {
+  #content {
+    width: 90%;
   }
-}
+  .group-title {
+    top: 0px;
+  }
+  #distin,
+  #game {
+    font-size: 80px;
+  }
+  .container-gifts {
+    transform: scale(0.6);
+    top: -35px;
+    right: -50px;
+  }
 
-/* Medium devices (tablets, less than 992px) */
-@media (max-width: 991.98px) {
   form {
     width: 45vw;
   }
 }
 
-/* Large devices (desktops, less than 1200px) */
-@media (max-width: 1199.98px) {
-  /* ...; */
+/* Small devices (landscape phones) */
+@media (max-width: 768px) {
+  .logo-distingo {
+    width: 192px;
+  }
+  .period {
+    font-size: 20px;
+  }
+  #content {
+    width: 90%;
+  }
+  .group-title {
+    top: 155px;
+  }
+  #distin,
+  #game {
+    font-size: 55px;
+  }
+
+  .container-gifts {
+    transform: scale(0.55);
+    top: -35px;
+    right: -50px;
+  }
+  form {
+    width: 60vw;
+  }
+  .container-edito {
+    height: 221px;
+  }
+  #edito {
+    width: 394px;
+    top: -155px;
+    max-height: 270px;
+  }
+  form {
+    width: 85vw;
+  }
+
+  .category-list-footer {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .footer-section {
+    border: none;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .footer-section:nth-last-child(1) {
+    border: none;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo-distingo {
+    width: 192px;
+  }
+  .period {
+    font-size: 20px;
+  }
+  #content {
+    width: 90%;
+  }
+  .group-title {
+    top: 125px;
+  }
+  #distin,
+  #game {
+    font-size: 55px;
+  }
+
+  .container-gifts {
+    transform: scale(0.5);
+    top: -42px;
+    right: -50px;
+  }
+  .container-edito {
+    height: 221px;
+  }
+  #edito {
+    width: 321px;
+    top: -50px;
+    max-height: 270px;
+  }
+  form {
+    width: 85vw;
+  }
+
+  .category-list-footer {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .footer-section {
+    border: none;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .footer-section:nth-last-child(1) {
+    border: none;
+    width: 100%;
+    text-align: center;
+  }
 }

@@ -2,8 +2,10 @@ import React from "react";
 import "../App.css";
 import logo from "../Images/logo-distingo.png";
 import visu from "../Images/visu.png";
+import visuMobile from "../Images/visu-mobile.png";
 import gifts from "../Images/gifts.png";
 import captcha from "../Images/recaptcha.png";
+import arrow from "../Images/arrow.png";
 import Field from "../Components/Field";
 import Checkbox from "../Components/Checkbox";
 
@@ -103,15 +105,17 @@ export default class Main extends React.Component {
         })
     }
     render() {
-        const sections = ["Les dotations", "Règlement", "Crédits", "Application DISTINGO", "Présentation de l application"];
+        const sections = ["Les dotations", "Règlement", "Crédits", "Application DISTINGO", "Présentation de l' application"];
+        let mobileSize = window.innerWidth <= 768;
+        console.log(window.innerWidth);
         return (
             <div className="main-container">
                 <header className="container-img py-3">
-                    <img src={logo} width="298" height="62" alt="logo distingo" />
+                    <img src={logo} alt="logo distingo" className="logo-distingo" />
                 </header>
                 <div id="content">
                     <figure className="container-header-img">
-                        <img src={visu} alt="logo distingo" className="visu" />
+                        <img src={mobileSize ? visuMobile : visu} alt="logo distingo" className="visu" />
                         <div className="group-title py-3">
                             <figcaption className="period py-1">DU 6 MAI AU 6 JUIN 2019</figcaption>
                             <figcaption className="big-game">GRAND JEU</figcaption>
@@ -124,9 +128,9 @@ export default class Main extends React.Component {
                         <div className="container-gifts"><img src={gifts} alt="gifts" /></div>
                     </figure>
                     <div className="container-edito" >
-                        <div id="edito" className="p-4">
+                        <div id="edito" className="p-md-4 p-5">
                             <p id="last-step">Plus qu'une étape pour valider votre participation !</p>
-                            <p id="invite-form">Pour valider votre participation au tirage au sort et vous sauvez pour de bon,<br /> veuillez remplir les champs ci-dessous :</p>
+                            <p id="invite-form">Pour valider votre participation au tirage au sort et vous sauvez pour de bon,{!mobileSize && (<br />)} veuillez remplir les champs ci-dessous :</p>
                         </div>
                     </div>
 
@@ -172,7 +176,7 @@ export default class Main extends React.Component {
                                 <img src={captcha} alt="recaptcha" className="my-2" />
                                 <p id="mention mt-2">*Champs obligatoires</p>
                             </div>
-                            <div className="d-flex justify-content-center mt-2 mb-5"><input type="submit" value="VALIDER" className="button-validation"></input></div>
+                            <div className="d-flex justify-content-center mt-2 mb-5 container-submit"><input type="submit" value="VALIDER" className="button-validation"></input><img src={arrow} alt="arrow" className="arrow" /></div>
 
 
                         </form>
