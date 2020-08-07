@@ -1,8 +1,3 @@
-## Note for the reviewer :
-
-I created a new branch final-draft. This is my updated work on this test. I wanted to continue on this exercise, it's a good training. 
-The branch master is the state of my work just before my last call to you.
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

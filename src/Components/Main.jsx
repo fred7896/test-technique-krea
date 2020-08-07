@@ -52,10 +52,19 @@ export default class Main extends React.Component {
     }
 
     checkData = () => {
-        const data = JSON.stringify(this.state);
-        const { isNameValid, isSurnameValid, isValidBirthDate, isEmail, phoneNumber } = this.state;
+        const { civilite, customerName, customerSurname, birthDate, email, phoneNumber, inputCheckbox, isNameValid, isSurnameValid, isValidBirthDate, isEmail } = this.state;
+        const data = {
+            "civilite": civilite,
+            "lastname": customerName,
+            "firstname": customerSurname,
+            "birthday": birthDate,
+            "email": email,
+            "phone": phoneNumber,
+            "optin": inputCheckbox
+        };
+        const postData = JSON.stringify(data);
         if (isNameValid && isSurnameValid && isValidBirthDate && isEmail && phoneNumber.length > 0) {
-            console.log(data);
+            console.log(postData);
         } else {
             console.log("le formulaire contient des erreurs");
         }
@@ -107,7 +116,6 @@ export default class Main extends React.Component {
     render() {
         const sections = ["Les dotations", "Règlement", "Crédits", "Application DISTINGO", "Présentation de l' application"];
         let mobileSize = window.innerWidth <= 768;
-        console.log(window.innerWidth);
         return (
             <div className="main-container">
                 <header className="container-img py-3">
