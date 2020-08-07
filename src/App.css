@@ -309,6 +309,11 @@ input:focus {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+
+.mention {
+  text-align: center;
+}
+
 /* Submit button */
 
 .button-validation {

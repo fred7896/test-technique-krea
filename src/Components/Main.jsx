@@ -3,6 +3,7 @@ import "../App.css";
 import logo from "../Images/logo-distingo.png";
 import visu from "../Images/visu.png";
 import gifts from "../Images/gifts.png";
+import captcha from "../Images/recaptcha.png";
 import Field from "../Components/Field";
 import Checkbox from "../Components/Checkbox";
 
@@ -26,8 +27,6 @@ export default class Main extends React.Component {
 
         }
     }
-
-
 
     handleChange = (e) => {
         const name = e.target.name;
@@ -151,20 +150,29 @@ export default class Main extends React.Component {
                                 <Field name="customerName" type="text" value={this.state.customerName} onChange={this.handleChange} placeholder="Nom*" ></Field>
                                 {this.state.isSubmit && (this.state.customerName.length === 0) && <div className="error" aria-live="polite">Veuillez remplir ce champ</div>}
                                 {this.state.isSubmit && (this.state.customerName.length > 0) && !this.state.isNameValid && <div className="error" aria-live="polite">Nom invalide</div>}
+
                                 <Field name="customerSurname" type="text" value={this.state.customerSurname} onChange={this.handleChange} placeholder="Prénom*"></Field>
                                 {this.state.isSubmit && (this.state.customerSurname.length === 0) && <div className="error" aria-live="polite">Veuillez remplir ce champ</div>}
                                 {this.state.isSubmit && (this.state.customerSurname.length > 0) && !this.state.isSurnameValid && <div className="error" aria-live="polite">Prénom invalide</div>}
+
                                 <Field name="birthDate" type="text" value={this.state.birthDate} onChange={this.handleChange} placeholder="Date de naissance*"></Field>
                                 {this.state.isSubmit && (this.state.birthDate.length > 0) && !this.state.isValidBirthDate && <div className="error" aria-live="polite">Date de naissance invalide.<br />Formats acceptés : JJ/MM/AAAA ou JJ-MM-AAAA</div>}
                                 {this.state.isSubmit && (this.state.birthDate.length === 0) && <div className="error" aria-live="polite">Veuillez remplir ce champ</div>}
+
                                 <Field name="email" type="email" value={this.state.email} onChange={this.handleChange} placeholder="Adresse email*"></Field>
                                 {this.state.isSubmit && (this.state.email.length === 0) && <div className="error" aria-live="polite">Veuillez remplir ce champ</div>}
                                 {this.state.isSubmit && (this.state.email.length > 0) && !this.state.isEmail && <div className="error" aria-live="polite">Email invalide</div>}
+
                                 <Field name="phoneNumber" type="tel" value={this.state.phoneNumber} onChange={this.handleChange} placeholder="Téléphone*"></Field>
                                 {this.state.isSubmit && (this.state.phoneNumber.length === 0) && <div className="error" aria-live="polite">Veuillez remplir ce champ</div>}
                             </div>
                             <Checkbox name="inputCheckbox" value={this.state.inputCheckbox} onChange={this.handleChange} >J'accepte de recevoir les offres DISTINGO (notamment les offres de fidélisation réservées aux clients) ainsi que celles des sociétés du groupe PSA et de leur réseau de distribution par email.</Checkbox>
-                            <div className="d-flex justify-content-center my-5"><input type="submit" value="VALIDER" className="button-validation"></input></div>
+
+                            <div className="d-flex flex-column align-items-center">
+                                <img src={captcha} alt="recaptcha" className="my-2" />
+                                <p id="mention mt-2">*Champs obligatoires</p>
+                            </div>
+                            <div className="d-flex justify-content-center mt-2 mb-5"><input type="submit" value="VALIDER" className="button-validation"></input></div>
 
 
                         </form>
